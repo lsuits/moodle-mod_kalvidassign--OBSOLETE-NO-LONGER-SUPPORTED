@@ -32,7 +32,7 @@ class kalvidassign_singlesubmission_form extends moodleform {
      * This function defines the forums elments that are to be displayed
      */
     public function definition() {
-        global $CFG, $PAGE;
+        global $CFG, $PAGE, $COURSE;
 
         $mform =& $this->_form;
 
@@ -83,7 +83,7 @@ class kalvidassign_singlesubmission_form extends moodleform {
 
         if (!empty($entryobject)) {
             list($entryobject->width, $entryobject->height) = kalvidassign_get_player_dimensions();
-            $courseid = get_courseid_from_context($this->_customdata->context);
+            $courseid = $COURSE->id;
 
             // Set the session
             $session = local_kaltura_generate_kaltura_session(array($entryobject->id));
