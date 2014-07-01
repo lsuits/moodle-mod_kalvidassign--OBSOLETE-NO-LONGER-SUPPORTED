@@ -32,7 +32,7 @@ class kalvidassign_singlesubmission_form extends moodleform {
      * This function defines the forums elments that are to be displayed
      */
     public function definition() {
-        global $CFG, $PAGE, $COURSE;
+        global $CFG, $COURSE;
 
         $mform =& $this->_form;
 

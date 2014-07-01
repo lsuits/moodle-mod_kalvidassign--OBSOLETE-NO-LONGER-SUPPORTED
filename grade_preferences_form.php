@@ -32,7 +32,7 @@ require_once($CFG->libdir.'/formslib.php');
 class kalvidassign_gradepreferences_form extends moodleform {
 
     function definition() {
-        global $CFG, $COURSE, $USER;
+        global $COURSE, $USER;
 
         $mform =& $this->_form;
 
